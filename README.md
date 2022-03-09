@@ -16,7 +16,7 @@
 ## Built with
 - HTML
 - CSS
-- JavaScipt
+- JavaScript
 - Bootstrap
 
 
