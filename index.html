@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <button class="btn btn-light btn-lg btn-reset ms-3">🔁 Reset</button>
+    <button
+      class="btn btn-light btn-lg btn-game-rules ms-3 float-end me-3"
+      data-bs-toggle="modal"
+      data-bs-target="#game-rules"
+    >
+      ❔ How to play?
+    </button>
+    <div class="game-result text-center">
+      <h1 class="mb-4" id="game-result">ROUND 1</h1>
+    </div>
+
+    <div class="d-flex justify-content-around text-center">
+      <section class="player-0">
+        <h1><span id="arrow-0">▶</span>PLAYER 1</h1>
+        <p class="total-score fs-1" id="total-0">0</p>
+        <div class="current fs-4 px-2 py-2">
+          <p class="current-label">Current Score</p>
+          <p class="current-score" id="current-0">0</p>
+        </div>
+      </section>
+
+      <section class="player-1">
+        <h1><span id="arrow-1">▶</span>PLAYER 2</h1>
+        <p class="total-score fs-1" id="total-1">0</p>
+        <div class="current fs-4 px-2 py-2">
+          <p class="current-label">Current Score</p>
+          <p class="current-score" id="current-1">0</p>
+        </div>
+      </section>
+    </div>
+    <div class="game-buttons d-flex flex-column text-center">
+      <div>
+        <button class="btn btn-light btn-lg btn-roll mb-3">🎲 Roll Dice</button>
+      </div>
+      <div>
+        <button class="btn btn-light btn-lg btn-end-turn">✋ End turn</button>
+      </div>
+    </div>
+    <div class="dices-images d-flex justify-content-center">
+      <img class="img-fluid dice-image me-2" id="img-0" src="dice-1.png" />
+      <img class="img-fluid dice-image" id="img-1" src="dice-2.png" />
+    </div>
+
+    <!-- Button trigger modal -->
+
+    <div
+      class="modal fade"
+      id="game-rules"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">How to play?</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>There are 3 rounds in total.</li>
+              <li>
+                Each turn, a player repeatedly rolls 2 dices until the sum of
+                the rolls exceed 20 or the player ends the turn.
+              </li>
+              <li>
+                The goal of the game is to beat the other player while avoiding
+                going over 20.
+              </li>
+              <li>It will be a draw if both players roll a sum of above 20.</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

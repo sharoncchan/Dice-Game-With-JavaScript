@@ -1,0 +1,31 @@
+body {
+  height: 100vh;
+  background: linear-gradient(to right, lavender, paleturquoise);
+}
+
+.total-score {
+  margin-top: 300px;
+}
+
+.current {
+  background-color: #23bebe;
+  border-radius: 9px;
+  color: white;
+  margin-top: 200px;
+}
+
+.game-buttons {
+  margin-top: -400px;
+}
+
+.dices-images {
+  margin-top: -300px;
+}
+
+.dice-image {
+  width: 100px;
+}
+
+.hidden {
+  display: none;
+}
